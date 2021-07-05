@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
 
@@ -14,5 +15,12 @@ export default {
   components: {
     HelloWorld,
   },
+  created(){
+    axios({
+      url:"/api/home123"
+    }).then(res=>{
+      console.log(123,res)
+    })
+  }
 };
 </script>
